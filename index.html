@@ -1,88 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--metadados(dados sobre dados) titulo do documento,styles,scripts,etc-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--instructs mobile browsers how to scale the viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--instructs mobile browsers how to scale the viewport-->
     <link rel="stylesheet" href="style.css">
     <title>Pesquisa sobre Estilos de Jogo em CS</title>
 </head>
+
 <body>
 
     <!--Titulo e descrição da página-->
-    <h1 id="title">Formulário de Pesquisa para Jogadores de CS(Counter-Strike)</h1>
-     <p id="description">Obrigado por tirar um tempo para nos ajudar a melhorar a plataforma!</p>
+    <div class="container">
+        <h1 id="title">Formulário de Pesquisa para Jogadores de CS(Counter-Strike)</h1>
+        <p id="description">Obrigado por tirar um tempo para nos ajudar a melhorar a plataforma!</p>
 
-    <!--Formulário para depois "submeter"-->
-     <form id="survey-form">
+        <!--Formulário para depois "submeter"-->
+        <form id="survey-form">
 
-        <!-- Nome -->        
-        <label id="name-label" for="name">Nome</label>
-        <input type="text" id="name" name="name" placeholder="Insira o seu Nome" required >
+            <!-- Nome -->
+            <div class="form-group">
+                <label id="name-label" for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Insira o seu Nome" required>
+            </div>
 
-        <!-- Email -->
-        <label id="email-label" for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Insira o seu Email" required>
+            <!-- Email -->
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Insira o seu Email" required>
+            </div>
 
-        <!-- Idade -->   
-        <label id="number-label" for="number">Idade</label>
-        <input type="number" id="number" name="age" min="1" max="99" placeholder="Insira a sua Idade">
+            <!-- Idade -->
+            <div class="form-group">
+                <label id="number-label" for="number">Idade</label>
+                <input type="number" id="number" name="age" min="1" max="99" placeholder="Insira a sua Idade">
+            </div>
 
-        <!-- Mapa Favorito -->
-        <label for="dropdown">Qual o teu mapa favorito?</label>
-        <select name="dropdown" id="dropdown">
-            <option value="">Seleciona o teu mapa favorito</option>
-            <option value="dust2">Dust2</option>
-            <option value="mirage">Mirage</option>
-            <option value="inferno">Inferno</option>
-            <option value="nuke">Nuke</option>
-            <option value="train">Train</option>
-            <option value="ancient">Ancient</option>
-            <option value="anubis">Anubis</option>
-        </select>
+            <!-- Mapa Favorito -->
+            <div class="form-group">
+                <label for="dropdown">Qual o teu mapa favorito?</label>
+                <select name="dropdown" id="dropdown">
+                    <option value="">Seleciona o teu mapa favorito</option>
+                    <option value="dust2">Dust2</option>
+                    <option value="mirage">Mirage</option>
+                    <option value="inferno">Inferno</option>
+                    <option value="nuke">Nuke</option>
+                    <option value="train">Train</option>
+                    <option value="ancient">Ancient</option>
+                    <option value="anubis">Anubis</option>
+                </select>
+            </div>
 
-        <!-- Horas jogadas por semana -->
-        <fieldset>
-            <legend>Quantas horas jogas CS por semana?</legend>
-            <label><input type="radio" name="playtime" value="0-2"> 0 - 2 horas</label>
-            <label><input type="radio" name="playtime" value="2-4"> 2 - 4 horas</label>
-            <label><input type="radio" name="playtime" value="4-6"> 4 - 6 horas</label>
-        </fieldset>
+            <!-- Horas jogadas por semana -->
+            <div class="form-group">
+                <fieldset>
+                    <legend>Quantas horas jogas CS por semana?</legend>
+                    <label><input type="radio" name="playtime" value="0-2"> 0 - 2 horas</label>
+                    <label><input type="radio" name="playtime" value="2-4"> 2 - 4 horas</label>
+                    <label><input type="radio" name="playtime" value="4-6"> 4 - 6 horas</label>
+                </fieldset>
+            </div>
 
-        <!-- Arma favorita -->
-        <label for="weapon">Qual a tua arma favorita?</label>
-        <select name="weapon" id="weapon">
-            <option value="">Seleciona a tua arma favorita</option>
-            <option value="m4a4">M4A4</option>
-            <option value="ak47">AK-47</option>
-            <option value="eagle">Desert-Eagle</option>
-            <option value="awp">AWP</option>
-            <option value="usp">USP</option>
-            <option value="scout">Scout</option>
-            <option value="glock">Glock</option>
-        </select>
+            <!-- Arma favorita -->
+            <div class="form-group">
+                <label for="weapon">Qual a tua arma favorita?</label>
+                <select name="weapon" id="weapon">
+                    <option value="">Seleciona a tua arma favorita</option>
+                    <option value="m4a4">M4A4</option>
+                    <option value="ak47">AK-47</option>
+                    <option value="eagle">Desert-Eagle</option>
+                    <option value="awp">AWP</option>
+                    <option value="usp">USP</option>
+                    <option value="scout">Scout</option>
+                    <option value="glock">Glock</option>
+                </select>
+            </div>
 
-        <!-- Equipas favoritas -->
-        <fieldset>
-            <legend>Quais as tuas equipas de CS favoritas? (Top 10 mundial)</legend>
-            <label><input type="checkbox" name="teams[]" value="spirit"> Spirit</label>
-            <label><input type="checkbox" name="teams[]" value="vitality"> Vitality</label>
-            <label><input type="checkbox" name="teams[]" value="navi"> NaVi</label>
-            <label><input type="checkbox" name="teams[]" value="mouz"> MOUZ</label>
-            <label><input type="checkbox" name="teams[]" value="eternal"> Eternal Fire</label>
-            <label><input type="checkbox" name="teams[]" value="mongolz"> The MongolZ</label>
-            <label><input type="checkbox" name="teams[]" value="g2"> G2</label>
-            <label><input type="checkbox" name="teams[]" value="faze"> FaZe</label>
-            <label><input type="checkbox" name="teams[]" value="liquid"> Liquid</label>
-            <label><input type="checkbox" name="teams[]" value="falcons"> Falcons</label>
-        </fieldset>
+            <!-- Equipas favoritas -->
+            <div class="form-group">
+                <fieldset>
+                    <legend>Quais as tuas equipas de CS favoritas? (Top 10 mundial)</legend>
+                    <label><input type="checkbox" name="teams[]" value="spirit"> Spirit</label>
+                    <label><input type="checkbox" name="teams[]" value="vitality"> Vitality</label>
+                    <label><input type="checkbox" name="teams[]" value="navi"> NaVi</label>
+                    <label><input type="checkbox" name="teams[]" value="mouz"> MOUZ</label>
+                    <label><input type="checkbox" name="teams[]" value="eternal"> Eternal Fire</label>
+                    <label><input type="checkbox" name="teams[]" value="mongolz"> The MongolZ</label>
+                    <label><input type="checkbox" name="teams[]" value="g2"> G2</label>
+                    <label><input type="checkbox" name="teams[]" value="faze"> FaZe</label>
+                    <label><input type="checkbox" name="teams[]" value="liquid"> Liquid</label>
+                    <label><input type="checkbox" name="teams[]" value="falcons"> Falcons</label>
+                </fieldset>
+            </div>
 
-        <!-- Comentários -->
-        <label for="comments">Comentários / Sugestões</label>
-        <textarea id="comments" name="comments" rows="10" cols="60" placeholder="Insere aqui comentários"></textarea>
+            <!-- Comentários -->
+            <div class="form-group">
+                <label for="comments">Comentários / Sugestões</label>
+                <textarea id="comments" name="comments" rows="10" cols="60"
+                    placeholder="Insere aqui comentários"></textarea>
+            </div>
 
-        <!-- Botão de Submissão -->
-        <button type="submit" id="submit">Submeter</button>
-    </form>
+            <!-- Botão de Submissão -->
+            <button type="submit" id="submit">Submeter</button>
+        </form>
+    </div>
 </body>
+
 </html>
