@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("./img/cs2.jpg");
+    background-size: cover;
+    /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita repetição */
+    background-attachment: fixed;
+    /* Mantém a imagem fixa ao rolar */
+    margin: 0;
+    height: 100vh;
+    /* Garante que o fundo ocupa toda a tela */
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    /* Centraliza automaticamente */
+    padding: 20px;
+    color: #f1f1f1;
+    box-shadow: 0px 0px 10px #f39c12;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.651);
+    /* Leve transparência para separar do fundo */
+}
+
+h1 {
+    font:
+        1.2rem "Fira Sans",
+        sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#description {
+    font:
+        italic 0.8rem "Fira Sans",
+        sans-serif;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    /* Alinha o texto e o checkbox verticalmente */
+    margin-bottom: 10px;
+    /* Espaço entre os checkboxes */
+    font-size: 15px;
+}
+
+.checkbox-group legend {
+    margin-bottom: 5px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+    /* Espaço entre o checkbox e o texto */
+    accent-color: #f39c12;
+    /* Altera a cor do checkbox */
+}
+
+input,
+select,
+textarea,
+fieldset {
+    padding: 8px;
+    border: 1px solid #f39c12;
+    border-radius: 5px;
+    background: #2b2b2b;
+    color: #fff;
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #bbb;
+}
+
+button {
+    background: #f39c12;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.1s;
+}
+
+button:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+    /* Efeito subtil de clique */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
